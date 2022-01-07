@@ -1,34 +1,33 @@
 package array;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-public class PrintBigInt {
+public class Ranking {
 
     public ArrayList<Integer> solution(int n, int[] arr) {
-
         ArrayList<Integer> answer = new ArrayList<>();
-        answer.add(arr[0]);
 
-        for (int i = 1; i < n; i++) {
-            if(arr[i] > arr[i-1]) answer.add(arr[i]);
+        for(int i=0; i<n; i++) {
+            int cnt = 1;
+            for(int j=0;j<n;j++) {
+                if(arr[j] > arr[i]) cnt++;
+            }
+            answer.add(cnt);
         }
-
         return answer;
     }
 
     public static void main(String[] args) {
-        PrintBigInt T = new PrintBigInt();
+        Ranking T = new Ranking();
         Scanner kb = new Scanner(System.in);
         int n = kb.nextInt();
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
             arr[i] = kb.nextInt();
         }
-//        for(int x: T.solution(n, arr)) {
-//            System.out.println(x + " ");
-//        }
-        System.out.println(T.solution(n, arr));
+        for (int m : T.solution(n, arr)) {
+            System.out.print(m + " ");
+        }
     }
 }
