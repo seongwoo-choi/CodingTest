@@ -27,17 +27,15 @@ sys.stdin = open("in1.txt", "rt")
 n = int(input(""))
 m = list(map(int, input("").split()))
 mm, c = list(), list()
-sum, avg = 0, 0
+avg = 0, 0
 s = ""
 
-for i in m:
-    sum += i
-avg = round(sum / n)
+ave = round(sum(m) / n)
 for idx, val in enumerate(m):
     mm = sorted(m, reverse=True)
-    if mm[idx] > avg:
+    if mm[idx] > ave:
         c.append(str(mm[idx]))
-    if mm[idx] == avg:
+    if mm[idx] == ave:
         c.append(str(mm[idx]))
 s = "".join(c[-1:])
-print(avg, m.index(int(s))+1)
+print(ave, m.index(int(s)) + 1)
