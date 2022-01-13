@@ -26,9 +26,8 @@ public class PrintBigInt {
         for (int i = 0; i < n; i++) {
             arr[i] = kb.nextInt();
         }
-//        for(int x: T.solution(n, arr)) {
-//            System.out.println(x + " ");
-//        }
-        System.out.println(T.solution(n, arr));
+        for(int x: T.solution(n, arr)) {
+            System.out.print(x + " ");
+        }
     }
 }
