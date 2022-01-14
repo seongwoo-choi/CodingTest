@@ -7,14 +7,11 @@ arr = list(map(str, input().split(" ")))
 
 sum = 0
 newArr = []
-
-for i in " ".join(arr):
-    if (i.isdigit()):
-        sum += int(i)
-    else:
-        if sum == 0:
-            continue
-        newArr.append(sum)
-        sum = 0
+print(arr)
+for i in arr:
+    sum=0
+    for x in i:
+        sum += int(x)
+    newArr.append(sum)
 idx = newArr.index(max(newArr))
 print(arr[idx])
