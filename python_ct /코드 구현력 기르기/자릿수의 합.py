@@ -7,11 +7,9 @@ arr = list(map(str, input().split(" ")))
 
 sum = 0
 newArr = []
-arr.append(" ")
-a = " ".join(arr)
 
 for i in " ".join(arr):
-    if(i == " "):
+    if(not i.isdigit()):
         newArr.append(sum)
         sum=0
         continue
