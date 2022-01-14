@@ -29,13 +29,28 @@ m = list(map(int, input("").split()))
 mm, c = list(), list()
 avg = 0, 0
 s = ""
+min = 2147000000
 
 ave = round(sum(m) / n)
+# for idx, val in enumerate(m):
+#     mm = sorted(m, reverse=True)
+#     if mm[idx] > ave:
+#         c.append(str(mm[idx]))
+#     if mm[idx] == ave:
+#         c.append(str(mm[idx]))
+# s = "".join(c[-1:])
+# print(ave, m.index(int(s)) + 1)
+
+print(m)
 for idx, val in enumerate(m):
-    mm = sorted(m, reverse=True)
-    if mm[idx] > ave:
-        c.append(str(mm[idx]))
-    if mm[idx] == ave:
-        c.append(str(mm[idx]))
-s = "".join(c[-1:])
-print(ave, m.index(int(s)) + 1)
+    tmp = abs(ave - val)
+    if min > tmp:
+        min = tmp
+        score = val
+        res = idx + 1
+    elif tmp == min:
+        if val > score:
+            score = val
+            res = idx + 1
+
+print(ave, res)
