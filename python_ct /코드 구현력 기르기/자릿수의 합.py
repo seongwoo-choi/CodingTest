@@ -9,13 +9,12 @@ sum = 0
 newArr = []
 
 for i in " ".join(arr):
-    if(not i.isdigit()):
+    if (i.isdigit()):
+        sum += int(i)
+    else:
+        if sum == 0:
+            continue
         newArr.append(sum)
-        sum=0
-        continue
-    i = int(i)
-    sum += i
+        sum = 0
 idx = newArr.index(max(newArr))
 print(arr[idx])
-
-
