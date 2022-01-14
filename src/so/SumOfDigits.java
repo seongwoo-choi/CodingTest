@@ -12,19 +12,15 @@ public class SumOfDigits {
         ArrayList<Integer> res = new ArrayList<>();
         String newStr = Arrays.toString(arr);
         for (char s : newStr.toCharArray()) {
-            if (Character.isDigit(s)) {
-                sum += Integer.parseInt(String.valueOf(s));
-            } else {
-                if (sum == 0) {
-                    continue;
-                }
+            if (Character.isDigit(s)) sum += Integer.parseInt(String.valueOf(s));
+            else {
+                if (sum == 0) continue;
                 res.add(sum);
                 sum = 0;
             }
         }
         max = Collections.max(res);
         answer = arr[res.indexOf(max)];
-
         return answer;
     }
 

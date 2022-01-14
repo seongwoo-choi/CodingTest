@@ -7,7 +7,6 @@ arr = list(map(str, input().split(" ")))
 
 sum = 0
 newArr = []
-print(arr)
 for i in arr:
     sum=0
     for x in i:
