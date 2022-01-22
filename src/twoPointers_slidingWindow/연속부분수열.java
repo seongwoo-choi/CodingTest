@@ -15,23 +15,35 @@ public class 연속부분수열 {
             arr[i] = kb.nextInt();
         }
 
-        int p = 0, i = p + 1, sum = arr[p], cnt = 0;
-        while (true) {
-            if (sum < m) {
-                sum += arr[i];
-                if (sum == m) {
-                    cnt++;
-                }
-                if (i == n - 1) {
-                    break;
-                }
-                i++;
-            } else {
-                p++;
-                i = p + 1;
-                sum = arr[p];
+//        int p = 0, i = p + 1, sum = arr[p], cnt = 0;
+//        while (true) {
+//            if (sum < m) {
+//                sum += arr[i];
+//                if (sum == m) {
+//                    cnt++;
+//                }
+//                if (i == n - 1) {
+//                    break;
+//                }
+//                i++;
+//            } else {
+//                p++;
+//                i = p + 1;
+//                sum = arr[p];
+//            }
+//        }
+//        System.out.println(cnt);
+
+        // lt, rt 로 풀기
+        int answer = 0, sum = 0, lt = 0;
+        for (int rt = 0; rt < n; rt++) {
+            sum += arr[rt];
+            if (sum == m) answer++;
+            while (sum >= m) {
+                sum -= arr[lt++];
+                if(sum == m) answer++;
             }
         }
-        System.out.println(cnt);
+        System.out.println(answer);
     }
 }
