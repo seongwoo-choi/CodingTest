@@ -15,39 +15,19 @@ public class 최대길이연속부분수열 {
             arr[i] = kb.nextInt();
         }
 
-        int answer = 0, max = Integer.MIN_VALUE, rt = 0, lt = 0, cnt = 0;
-        while (true) {
-            if (cnt == k) {
-                if (arr[rt] == 1) {
-                    answer++;
-                    rt++;
-                    max = Math.max(max, answer);
-                    continue;
-                }
-                if (arr[rt] == 0) {
-                    answer = 0;
-                    cnt = 0;
-                    rt = lt++;
-                    continue;
-                }
+        int answer = 0, lt = 0, cnt = 0;
+//        int rt = 0
+
+        for (int rt = 0; rt < n; rt++) {
+            if (arr[rt] == 0) cnt++;
+            while (cnt > k) {
+                System.out.println("before " + lt + " " + rt);
+                if (arr[lt++] == 0) cnt--;
             }
-            if (cnt < k + 1) {
-                if (arr[rt] == 1) {
-                    answer++;
-                    rt++;
-                    max = Math.max(max, answer);
-                }
-                if (arr[rt] == 0) {
-                    answer++;
-                    cnt++;
-                    rt++;
-                    max = Math.max(max, answer);
-                }
-            }
-            if (rt == n-1) break;
+            System.out.println(rt - lt + 1);
+            answer = Math.max(answer, rt - lt + 1);
         }
 
-        System.out.println(max);
-
+        System.out.println(answer);
     }
 }
