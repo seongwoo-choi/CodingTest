@@ -18,7 +18,7 @@ public class 학급회장 {
             map.put(x, map.getOrDefault(x, 0) + 1);
         }
 
-        // map.keySey() => 해쉬맵의 키를 배열 형태로 만들어준다.
+        // map.keySet() => 해쉬맵의 키를 배열 형태로 만들어준다.
         // key 값으로 탐색
         for (char key : map.keySet()) {
             if(map.get(key) > max) {

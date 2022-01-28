@@ -1,8 +1,5 @@
 package str;
 
-import org.apache.groovy.parser.antlr4.util.StringUtils;
-import org.codehaus.groovy.util.StringUtil;
-
 import java.util.*;
 
 public class WordInSentence {
