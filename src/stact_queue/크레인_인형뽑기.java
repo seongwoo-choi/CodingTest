@@ -29,7 +29,7 @@ public class 크레인_인형뽑기 {
                         stack.pop();
                     }
                     else stack.push(tmp);
-                    // break 를 안하면 선택된 열의 모든 행을 전부 탐색한다.
+                    // break 를 안하면 선택된 열의 모든 행을 전부  탐색한다.
                     break;
                 }
             }
