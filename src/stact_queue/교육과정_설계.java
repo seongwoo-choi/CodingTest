@@ -25,6 +25,7 @@ public class 교육과정_설계 {
 //        방법 2
         for (char x : b.toCharArray()) {
             if (queue.contains(x)) {
+                // break -> 반복문을 탈출
                 if (x != queue.poll()) answer = "NO";
             }
         }
