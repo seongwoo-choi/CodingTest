@@ -1,10 +1,8 @@
 package dfs_bfs;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class 경로탐색_인접리스트 {
-
     static ArrayList<ArrayList<Integer>> graph;
     static int[] ch;
     static int n, m, answer = 0;
