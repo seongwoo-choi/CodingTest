@@ -11,6 +11,7 @@ public class 합이같은부분집합_DFS {
     public void DFS(int L, int sum, int[] arr) {
         if (flag) return;
         if (sum>total/2) return;
+        // 이곳에 L, sum, arr 에 대한 정보가 들어있다.
         if (L == n) {
             if ((total - sum) == sum) {
                 answer = "YES";
