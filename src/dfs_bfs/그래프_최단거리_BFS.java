@@ -1,12 +1,8 @@
 package dfs_bfs;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
 
 public class 그래프_최단거리_BFS {
-
     static int n, m;
     static ArrayList<ArrayList<Integer>> graph;
     static int[] ch, dis;
