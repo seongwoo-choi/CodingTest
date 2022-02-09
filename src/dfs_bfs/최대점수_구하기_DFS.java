@@ -19,6 +19,7 @@ public class 최대점수_구하기_DFS {
 
 
     public static void main(String[] args) {
+        ArrayList<Long> ch = new ArrayList<>();
         최대점수_구하기_DFS T = new 최대점수_구하기_DFS();
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
