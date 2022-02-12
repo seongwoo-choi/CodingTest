@@ -11,8 +11,7 @@ public class 순열_구하기 {
         if (L == m) {
             for (int x : pm) System.out.print(x + " ");
             System.out.println();
-        }
-        else {
+        } else {
             for (int i=0; i<n; i++) {
                 if(ch[i]==0) {
                     ch[i] = 1;
