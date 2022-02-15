@@ -31,6 +31,7 @@ public class 조합_구하기 {
         return 0;
     }
 
+
     public static void main(String[] args) {
         조합_구하기 T = new 조합_구하기();
         Scanner kb = new Scanner(System.in);
